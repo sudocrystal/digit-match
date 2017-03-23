@@ -1,7 +1,7 @@
 def digitMatch(x, y)
   raise ArgumentError("Please provide two numbers") if x < 0 || y < 0
   if x < 10 || y < 10
-    if x % 10 == y % 10
+    if x == y
       return 1
     else
       return 0
@@ -9,6 +9,6 @@ def digitMatch(x, y)
   elsif x % 10 == y % 10
     return 1 + digitMatch(x / 10, y / 10)
   else
-    return digitMatch(x / 10, y / 10);
+    return digitMatch(x / 10, y / 10)
   end
 end
